@@ -17,8 +17,7 @@ A Computer Networking course project that covers **(1)** designing a multi-site 
 10. [Key Learning Outcomes](#-key-learning-outcomes)
 11. [Author](#-author)
 
----<img width="769" height="457" alt="Network Design" src="https://github.com/user-attachments/assets/0454df7e-be7a-4e28-9f96-bcc8d2efdab7" />
-
+---
 
 ## 🔍 Project Overview
 
