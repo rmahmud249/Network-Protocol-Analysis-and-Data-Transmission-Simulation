@@ -10,10 +10,6 @@ multi-department network, IPv4 packet inspection with Wireshark,
 routing-path analysis with Traceroute, IP fragmentation, and a Selective
 Repeat Automatic Repeat reQuest (ARQ) flow-control simulation.
 
-The project was prepared as part of the **Computer Networking
-(CSE342.2)** course in the **B.Sc. in Computer Science and Engineering**
-program at **Southeast University**.
-
 ------------------------------------------------------------------------
 
 ## Table of Contents
@@ -59,17 +55,6 @@ and protocol analysis. It combines a multi-office network topology and
 subnet allocation with packet-level investigation and a flow-control
 simulation.
 
-The work is organized into three broad areas:
-
-1.  **Network planning and architecture** --- designing connectivity for
-    departments, remote offices, routers, switches, and servers.
-2.  **IP behavior and packet analysis** --- examining IPv4 headers,
-    routing behavior, TTL, checksums, and fragmentation using Wireshark
-    and Traceroute.
-3.  **Reliable data transfer** --- studying and simulating Selective
-    Repeat ARQ, then comparing its performance with Stop-and-Wait and
-    Go-Back-N.
-
 ## Project Objectives
 
 -   Design a network that connects multiple departments and remote
@@ -114,10 +99,6 @@ The network is divided into subnets so that each department or office
 can use a separate address range.
 
 #### IPv4 Address Allocation
-
-The following table reproduces the addressing plan documented in the
-project report.
-
   ----------------------------------------------------------------------------------------------
   Department /      Network / Subnet       Usable IP Range                   Subnet Mask
   Office                                                                     
@@ -145,9 +126,6 @@ network configuration before deployment.
 
 ### 2. Layered Network Architecture
 
-The project relates the network design to the OSI model and the TCP/IP
-protocol suite.
-
   -----------------------------------------------------------------------
   OSI Layer                           Role in the Project
   ----------------------------------- -----------------------------------
@@ -173,10 +151,7 @@ protocol suite.
   Physical                            Cables, ports, and physical network
                                       interfaces
   -----------------------------------------------------------------------
-
-The TCP/IP suite provides the practical protocol foundation for
-communication between devices across the designed network.
-
+  
 ### 3. DHCP and DNS
 
 **Dynamic Host Configuration Protocol (DHCP)** automatically provides
@@ -192,11 +167,6 @@ connectivity and enabling clients to access servers and other network
 resources.
 
 ### 4. IPv4 Packet Analysis with Wireshark
-
-Wireshark is used to inspect captured network traffic and examine the
-structure of IPv4 packets.
-
-The report discusses these important IPv4 header fields:
 
   -----------------------------------------------------------------------
   Field                               Purpose
@@ -235,9 +205,6 @@ The report discusses these important IPv4 header fields:
   Destination IP Address              Identifies the intended packet
                                       recipient.
   -----------------------------------------------------------------------
-
-Packet inspection helps connect theoretical protocol fields with the
-values visible in real packet captures.
 
 ### 5. Routing Behavior Analysis with Traceroute
 
@@ -498,21 +465,6 @@ Additional possible extensions include:
 -   Add setup instructions and test cases so another learner can
     reproduce the results.
 
-## Academic Information
-
-  Item                  Details
-  --------------------- ----------------------------------------
-  University            Southeast University
-  Department            Computer Science and Engineering (CSE)
-  Program               B.Sc. in Engineering in CSE
-  Course Code           CSE342.2
-  Course Title          Computer Networking
-  Submitted By          MD\. Rasel Mahmud
-  Student ID            2023000000046
-  Submitted To          Mohammad Ashraful Hoque
-  Faculty Designation   Assistant Professor
-  Department            Computer Science and Engineering (CSE)
-
 ## Disclaimer
 
 This repository documents an academic course assignment and its learning
@@ -524,6 +476,3 @@ live network.
 
 ------------------------------------------------------------------------
 
-**If you find this project useful for learning computer networking, feel
-free to explore the report, review the diagrams, and study the protocol
-analysis.**
