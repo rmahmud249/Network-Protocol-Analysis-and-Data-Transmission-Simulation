@@ -1,10 +1,4 @@
 # 🌐 Network Design, IP Protocol Analysis & Selective Repeat ARQ Simulation
-
-![Course](https://img.shields.io/badge/Course-CSE342.2%20Computer%20Networking-blue)
-![University](https://img.shields.io/badge/Southeast%20University-CSE-navy)
-![Tools](https://img.shields.io/badge/Tools-Packet%20Tracer%20%7C%20Wireshark%20%7C%20MATLAB-green)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-
 A Computer Networking course project that covers **(1)** designing a multi-site network with subnetting, **(2)** analyzing IPv4 packets, routing behavior and fragmentation with Wireshark, and **(3)** simulating and benchmarking the **Selective Repeat** flow-control algorithm against **Stop-and-Wait** and **Go-Back-N**.
 
 ---
@@ -23,21 +17,8 @@ A Computer Networking course project that covers **(1)** designing a multi-site 
 10. [Key Learning Outcomes](#-key-learning-outcomes)
 11. [Author](#-author)
 
----
+---<img width="769" height="457" alt="Network Design" src="https://github.com/user-attachments/assets/0454df7e-be7a-4e28-9f96-bcc8d2efdab7" />
 
-## 🎓 Project Information
-
-| Field | Details |
-|---|---|
-| **University** | Southeast University |
-| **Department** | Computer Science and Engineering (CSE) |
-| **Program** | B.Sc. Engg. in CSE |
-| **Course Code** | CSE342.2 |
-| **Course Title** | Computer Networking |
-| **Submitted By** | Md. Rasel Mahmud (ID: 2023000000046) |
-| **Submitted To** | Mohammad Ashraful Hoque, Assistant Professor, Dept. of CSE |
-
----
 
 ## 🔍 Project Overview
 
@@ -55,7 +36,7 @@ A Computer Networking course project that covers **(1)** designing a multi-site 
 
 The network connects three internal departments (**Sales, Engineers, HR**), two **remote offices**, and external **DNS** and **HTTPS** servers through four routers (R0–R3) and multiple Cisco 2960-24TT switches.
 
-![Network Topology](images/topology.png)
+<img width="769" height="457" alt="Network Design" src="https://github.com/user-attachments/assets/808c300c-004a-48ce-ab11-417fd42e89a3" />
 
 ### Address Allocation
 
@@ -97,7 +78,7 @@ The network connects three internal departments (**Sales, Engineers, HR**), two 
 
 A captured TCP packet (Frame 57840, `192.168.0.106 → 178.128.135.159`, destination port 443) was analyzed field by field.
 
-![Wireshark IPv4 Capture](images/wireshark-ip-header.png)
+<img width="638" height="293" alt="Screenshot_1" src="https://github.com/user-attachments/assets/ad77693f-0e0f-46c1-84b0-ce8d1793daa6" />
 
 | Field | Size | Description |
 |---|---|---|
@@ -116,7 +97,7 @@ A captured TCP packet (Frame 57840, `192.168.0.106 → 178.128.135.159`, destina
 
 `tracert 8.8.8.8` was used to map the path to Google DNS (`dns.google`). It completed in **12 hops**.
 
-![Traceroute Output](images/traceroute.png)
+<img width="596" height="241" alt="Screenshot_2" src="https://github.com/user-attachments/assets/c6983e61-6c72-4fe6-96b9-6674713b14e1" />
 
 **How it works:** Traceroute sends packets with TTL starting at 1 and increasing by 1. Each router decrements TTL; when it reaches 0, the router drops the packet and returns an **ICMP "Time Exceeded"** message, revealing its identity. Latency is low in the local network (<1 ms) and grows as packets travel farther (≈28–32 ms near the destination).
 
@@ -124,7 +105,7 @@ A captured TCP packet (Frame 57840, `192.168.0.106 → 178.128.135.159`, destina
 
 A large ping (`ping 192.168.0.1 -l 2000`) forced IP fragmentation.
 
-![Fragmentation Analysis](images/fragmentation.png)
+<img width="664" height="334" alt="Screenshot_3" src="https://github.com/user-attachments/assets/35246e55-f550-4847-a222-a58b0ae9340c" />
 
 **Findings (Frame 168):**
 - Total Length `1500`, **More Fragments (MF) flag set**, Fragment Offset `0` → this is the **first fragment**.
@@ -167,17 +148,6 @@ Selective Repeat (SR) is a **sliding-window ARQ protocol**. The sender transmits
 - **Packet 6** is lost multiple times and repeatedly retransmitted; packets 8 and 9 are also lost once before recovery.
 - By **time 60**, all packets (0–9) are received and acknowledged.
 
-![Selective Repeat Simulation](images/sr-simulation.png)
-
-### Performance Evaluation
-
-| Throughput Over Time | Latency per Packet |
-|---|---|
-| ![Throughput](images/throughput.png) | ![Latency](images/latency.png) |
-
-| Error Recovery (Retransmissions) | Bandwidth Utilization |
-|---|---|
-| ![Retransmissions](images/retransmissions.png) | ![Bandwidth](images/bandwidth.png) |
 
 ### Protocol Comparison
 
@@ -187,8 +157,6 @@ Selective Repeat (SR) is a **sliding-window ARQ protocol**. The sender transmits
 | Average Delay (s) | 0.416 | 0.416 | 0.416 |
 | Total Retransmissions | **11** | 20 | 20 |
 | Bandwidth Utilization | **0.036** | 0.010 | 0.036 |
-
-![ARQ Comparison](images/arq-comparison.png)
 
 **Takeaway:** Selective Repeat delivers the highest throughput with the fewest retransmissions, because it resends only the lost frames. Stop-and-Wait wastes time idling for each ACK, while Go-Back-N wastes bandwidth resending whole blocks of frames.
 
@@ -291,14 +259,7 @@ Selective Repeat (SR) is a **sliding-window ARQ protocol**. The sender transmits
 ## 👤 Author
 
 **Md. Rasel Mahmud**
-B.Sc. in CSE, Southeast University
-ID: 2023000000046
-
-- GitHub: [@your-username](https://github.com/your-username)
-- Email: your.email@example.com
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-
-**Supervisor:** Mohammad Ashraful Hoque, Assistant Professor, Dept. of CSE, Southeast University
-
+Department of Computer Science and Engineering (CSE)
+Southeast University
 ---
 
